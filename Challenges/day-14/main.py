@@ -30,7 +30,7 @@ while not game_over:
 
     print(vs)
     entry_b = data[rand_num()]
-    print(f"Compare B: {entry_b['name']}, {entry_b['description']}, from {entry_a['country']}.")
+    print(f"Against B: {entry_b['name']}, {entry_b['description']}, from {entry_a['country']}.")
 
     answer = input('Who has more followers? Type \'A\' or \'B\': ').lower()
     follower_list = compare(entry_a['follower_count'], entry_b['follower_count'])

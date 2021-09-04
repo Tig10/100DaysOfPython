@@ -36,4 +36,6 @@ def game():
     elif guess == number:
         print(f'Congratulations! {guess} is correct!')
 
+
 game()
+

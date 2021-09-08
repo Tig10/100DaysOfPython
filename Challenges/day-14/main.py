@@ -8,15 +8,18 @@ import os
 
 print(logo)
 
+
 def rand_num():
     end_num = len(data)
     rand_num = random.randint(0, end_num-1)
     return rand_num
 
+
 def compare(f_count1, f_count2):
     data_list = [f_count1, f_count2]
     result = sorted(data_list)
     return result
+
 
 game_over = False
 score = 0

@@ -32,6 +32,8 @@ resources = {
     "money": 0,
 }
 
+coffee = ['☕']
+
 
 def choice(selection, dic):
     for key in dic:
@@ -123,7 +125,7 @@ while running:
                 print(f'Here is ${change:.2f} in change.')
             resources['money'] += price
             resource_update(resources, order)
-            print(resources)
+            print(f'Here is your {prompt} {coffee[0]} ')
 
 
 

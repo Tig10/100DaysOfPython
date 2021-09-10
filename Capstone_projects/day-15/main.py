@@ -1,4 +1,5 @@
 from art import logo
+
 MENU = {
     "espresso": {
         "ingredients": {
@@ -68,7 +69,12 @@ def check_resources(resources_dic, order_dic):
                 return False
 
 
-def process_coins(q_coins, d_coins, n_coins, p_coins):
+def process_coins():
+    print('Please insert coins for your purchase: ')
+    q_coins = float(input('quarters, $0.25: '))
+    d_coins = float(input('dimes, $0.10: '))
+    n_coins = float(input('nickles, $0.05: '))
+    p_coins = float(input('pennies, $0.01: '))
     total = 0.25*q_coins + 0.10*d_coins + 0.05*n_coins + 0.01*p_coins
     return total
 
@@ -108,12 +114,7 @@ while running:
             print(f'Sorry, there\'s not enough {resources_check} '
                   f'for that drink. Choose a different one or try again later.')
             continue
-        print('Please insert coins for your purchase: ')
-        quarters = float(input('quarters, $0.25: '))
-        dimes = float(input('dimes, $0.10: '))
-        nickles = float(input('nickles, $0.05: '))
-        pennies = float(input('pennies, $0.01: '))
-        payment = process_coins(quarters, dimes, nickles, pennies)
+        payment = process_coins()
         print(payment)
         payment_check = check_trans(payment, order)
         if not payment_check:
